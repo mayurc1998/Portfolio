@@ -1,0 +1,115 @@
+{
+  "name": "Mayur Chablani",
+  "total_experience_years": "5+",
+  "current_role": "Software Development Engineer, Jio Platforms Ltd",
+  "seniority_level": "Senior Full-Stack Engineer",
+  "primary_skills": [
+    "Ruby on Rails",
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "Python",
+    "PostgreSQL",
+    "System Design",
+    "API Development"
+  ],
+  "secondary_skills": [
+    "FastAPI",
+    "Flask",
+    "Inertia.js",
+    "Vite",
+    "MongoDB",
+    "MySQL",
+    "WebSockets",
+    "LangChain",
+    "RAG",
+    "Cordova",
+    "React Native"
+  ],
+  "domains": [
+    "Digital Signage",
+    "Telecom",
+    "Network Device Management",
+    "Hospitality Tech",
+    "Automation & QA",
+    "GenAI Applications"
+  ],
+  "key_projects": [
+    {
+      "name": "JioSignage CMS",
+      "problem": "Need for a scalable, remotely managed digital signage platform with rich media and third-party integrations.",
+      "solution": "Built end-to-end CMS with real-time features, media scheduling, widget integrations, and queue management for enterprise clients.",
+      "tech_stack": [
+        "Ruby on Rails",
+        "React.js",
+        "PostgreSQL",
+        "Node.js",
+        "WebSockets"
+      ],
+      "impact": "Deployed across multiple enterprise clients, improving content management efficiency and customer engagement."
+    },
+    {
+      "name": "Jio Spectra Support Portal",
+      "problem": "Lack of unified portal for monitoring and managing customer network devices.",
+      "solution": "Developed full-stack portal enabling device health monitoring, remote actions, and configuration management.",
+      "tech_stack": [
+        "Ruby on Rails",
+        "Inertia.js",
+        "React.js",
+        "Vite"
+      ],
+      "impact": "Improved operational efficiency for support teams and reduced device downtime."
+    },
+    {
+      "name": "Jio Omni Portal",
+      "problem": "Requirement for a high-performance router configuration portal similar to enterprise networking solutions.",
+      "solution": "Led frontend architecture using Next.js and integrated with external network APIs.",
+      "tech_stack": [
+        "Next.js",
+        "React.js",
+        "REST APIs"
+      ],
+      "impact": "Established foundation for scalable router configuration and partner integrations."
+    },
+    {
+      "name": "STB & Home Gateway Automation",
+      "problem": "Manual QA processes causing inefficiency and low test coverage.",
+      "solution": "Owned automation framework and built a MERN-based portal to execute tests and analyze reports.",
+      "tech_stack": [
+        "Python",
+        "MERN Stack",
+        "Selenium",
+        "Automation Frameworks"
+      ],
+      "impact": "Significantly improved QA efficiency, coverage, and reliability across devices."
+    },
+    {
+      "name": "GenAI Chatbot & Image Tools",
+      "problem": "Need for intelligent automation and content generation use cases.",
+      "solution": "Implemented chatbot with RAG and image generation/inpainting pipelines.",
+      "tech_stack": [
+        "FastAPI",
+        "LangChain",
+        "RAG",
+        "GPT-IMAGE-1"
+      ],
+      "impact": "Demonstrated practical GenAI adoption for internal and customer-facing use cases."
+    }
+  ],
+  "achievements": [
+    "Received Jio award for building crash- and ANR-free customer-facing applications",
+    "Recipient of R-Samman Award for outstanding contributions",
+    "Recognized for mentoring and improving overall code quality"
+  ],
+  "testing_and_quality": [
+    "RSpec for backend API testing",
+    "Vitest and React Testing Library for frontend testing",
+    "Pytest and Selenium for automation",
+    "Swagger and Postman for API validation"
+  ],
+  "leadership_and_mentoring": [
+    "Mentored junior developers across React and full-stack projects",
+    "Conducted code reviews and guided architectural decisions",
+    "Led frontend development initiatives on multiple portals"
+  ]
+}
