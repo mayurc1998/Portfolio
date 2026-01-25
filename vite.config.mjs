@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   // if deploying to GH Pages set base: '/REPO_NAME/',
+  base:'/Portfolio/',
   plugins: [
     react(),
     tailwindcss(),
