@@ -1,16 +1,16 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
 import { FilterProvider } from './context/FilterContext'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <FilterProvider>
         <App />
       </FilterProvider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 )
