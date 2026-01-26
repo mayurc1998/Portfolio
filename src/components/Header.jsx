@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 export default function Header() {
   const { name } = site;
   const [isDark, setIsDark] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem("site-dark");
@@ -43,11 +44,10 @@ export default function Header() {
     `hover:text-gray-900 dark:hover:text-white transition ${
       isActive
         ? isDark
-          ? "text-blue-400!"
-          : "text-teal-700!"
+          ? "!text-blue-400"
+          : "!text-teal-700"
         : "text-gray-600 dark:text-gray-300"
     }`;
-
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-gray-900/95 shadow-sm">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -64,40 +64,58 @@ export default function Header() {
         </NavLink>
 
         {/* Navigation */}
-        <nav className="flex items-center gap-6">
-          <div className="hidden md:flex space-x-6 text-sm">
-            <NavLink to="/about" className={navLinkClass}>
-              About
-            </NavLink>
-            <NavLink to="/skills" className={navLinkClass}>
-              Skills
-            </NavLink>
-            <NavLink to="/projects" className={navLinkClass}>
-              Projects
-            </NavLink>
-            <NavLink to="/education" className={navLinkClass}>
-              Education
-            </NavLink>
-          </div>
-
-          {/* Contact CTA */}
-          <NavLink
-            to="/contact"
-            className="initial-badge bg-green-800 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition"
+        {/* Nav */}
+          <nav
+            className={`
+              absolute md:static top-full left-0 right-0
+              bg-white 
+              md:bg-transparent!
+              md:flex md:items-center
+              shadow-none!
+              md:mr-15
+              ${mobileOpen ? "block" : "hidden md:flex"}
+            `}
           >
-            Contact
-          </NavLink>
+            <div className="flex flex-col md:flex-row md:items-center max-md:text-center gap-2 md:gap-6 p-4 md:p-0 text-sm">
+              <NavLink to="/about" onClick={() => setMobileOpen(false)} className={navLinkClass}>
+                About
+              </NavLink>
+              <NavLink to="/skills" onClick={() => setMobileOpen(false)} className={navLinkClass}>
+                Skills
+              </NavLink>
+              <NavLink to="/projects" onClick={() => setMobileOpen(false)} className={navLinkClass}>
+                Projects
+              </NavLink>
+              <NavLink to="/education" onClick={() => setMobileOpen(false)} className={navLinkClass}>
+                Education
+              </NavLink>
 
-          {/* Theme Toggle */}
-          <button
-            onClick={toggle}
-            aria-label="Toggle dark mode"
-            className="ml-2 p-2 rounded border border-gray-200 dark:border-gray-700"
-          >
-            {isDark ? "☀️" : "🌙"}
-          </button>
-        </nav>
+              <NavLink
+                to="/contact"
+                onClick={() => setMobileOpen(false)}
+                className={({ isActive })=> `${navLinkClass({isActive})} initial-badge font-bold md:bg-green-800 ${isDark && "text-gray-600" }  md:text-white! px-4 pb-2 md:py-2 rounded text-center`}
+              >
+                Contact
+              </NavLink>
+             
+              
+            </div>
+          </nav>
       </div>
+    <div className="absolute top-4 right-2">
+      <button
+        onClick={() => setMobileOpen(!mobileOpen)}
+        className={`md:hidden p-2 ${isDark && "text-white"}`}
+      >
+        ☰
+    </button>
+    <button
+          onClick={toggle}
+          className="p-2 "
+        >
+          {isDark ? "☀️" : "🌙"}
+      </button>
+      </div>  
     </header>
   );
 }

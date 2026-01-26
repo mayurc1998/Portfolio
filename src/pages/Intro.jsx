@@ -37,7 +37,7 @@ export default function Intro(){
   return (
     <section id="home" className="py-12 animate-fade-up">
       <div className="grid md:grid-cols-3 gap-8 items-center">
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 max-md:order-2">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">{name}</h1>
           <p className="text-primary font-medium mb-2">{current_role} · {total_experience_years} experience</p>
         <div
@@ -87,9 +87,22 @@ export default function Intro(){
           </div>
         </div>
         </div>
-        <div className="flex justify-center md:justify-end">
-          <img src={profilePic} alt={name} className="w-90 h-90 rounded-lg object-cover shadow-2xl border border-gray-100 dark:border-gray-700" />
-        </div>
+        <div className="flex justify-center md:justify-end max-md:order-1 mb-6 md:mb-0">
+        <img
+          src={profilePic}
+          alt={name}
+          className="
+            w-60 h-60
+            md:w-90 md:h-90
+            rounded-full md:rounded-lg
+            object-cover
+            shadow-xl
+            ring-4 ring-white dark:ring-gray-800
+            bg-gray-100 dark:bg-gray-800
+          "
+        />
+      </div>
+
       </div>
     </section>
   )
