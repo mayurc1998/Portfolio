@@ -4,7 +4,7 @@ import profilePic from "../assets/profilePic.png"
 import EnvelopeIcon from "../icons/EnvelopeIcon"
 import GithubIcon from "../icons/GithubIcon"
 import LinkedinIcon from "../icons/LinkedinIcon"
-import resume from  "../assets/Mayur_Chablani_Resume_15_SEPT_2025.pdf"
+import resume from  "../assets/Mayur_Chablani_Resume_01_Mar_2026.pdf"
 
 export default function Intro(){
   const { name, current_role, total_experience_years } = site
